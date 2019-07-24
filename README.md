@@ -12,6 +12,21 @@ nodejs index.js
 ```
 You can change configuration in index.js
 
+### token
+
+Grab default-token here. replace with your configuration like admin-user
+```
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep default | awk '{print $1}')
+```
+
+### host
+
+Check ```~/.kube/config``` for API endpoint
+
+ex: ```https://192.168.0.1:6443```
+
+set the host in index.js like ```wss://192.168.0.1:6443```
+
 ## Use browser goto http://127.0.0.1:8080
 
 Screenshot
